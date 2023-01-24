@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    color: white;
+}
+body{
+    cursor: none;
+}
+img , figure{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: none;
+}
+ul{
+    list-style-type: none;
+}
+
+.circulos{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+
+    filter: blur(40px);
+    animation: circulo1 20s linear infinite both;
+}
+.circulos .circulo{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    animation: circulo1 20s linear infinite both;
+}
+.circulos .circulo1{
+    top: 0%;
+    left: 0%;
+    animation: circulo1 100s linear infinite both;
+}
+.circulos .circulo1 .path{
+    fill: rgb(39, 37, 37);
+}
+.circulos .circulo2{
+    top: 0%;
+    right: 0%;
+}
+.circulos .circulo2 .path{
+    fill: rgb(39, 37, 37);
+}
+.circulos .circulo3{
+    bottom: 0%;
+    left: 0%;
+}
+.circulos .circulo3 .path{
+    fill: rgb(39, 37, 37);
+}
+.circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+}
+.circulos .circulo4 .path{
+    fill: rgb(39, 37, 37);
+}
+
+
+.header {
+    width: 100%;
+    min-height: 5em;
+    background: rgb(70, 71, 71);
+    padding: 1em 2em ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+.header .ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .li{
+    margin: 0 1em;
+}
+
+.main{
+    margin: 0 0 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.seccion{
+    width: 100%;
+    min-height: 80vh;
+    padding: 2em ;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.seccion .info {
+    font-size: 1.3em;
+    animation: aparecer1 2s ease 1s both;
+}
+.seccion .ul{
+    margin: 2em 0 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+} 
+.seccion .ul .li{
+    margin: 0 1em;
+    font-family: 'Playfair Display', serif;
+} 
+.seccion .ul .a{
+    width: 10em;
+    margin: 5em;
+    transition: all .5s ease;
+    animation: aparecer1 2s ease 1 backwards;
+} 
+
+.seccion .ul>:nth-child(2) .a{
+    animation-delay: .5s;
+}
+.seccion .ul .a:hover{
+    color: rgb(119, 117, 117);
+}
+
+.seccion .h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 5em;
+    font-weight: 200;
+    line-height: 1em;
+    animation: aparecer2 2s ease 1s both;
+    
+}
+.seccion .h3{
+    font-family: 'Playfair Display', serif;;
+    font-size: 3em;
+    font-weight: 10;
+    font-style: italic;
+    animation: aparecer2 2s ease 1s both;
+}
+.seccion .p{
+    animation: aparecer2 2s ease 1s both;
+}
+.seccion .grid{
+    width: 90%;
+    max-width: 40em;
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem , 1fr ));
+    gap: 1em;
+    animation: aparecer2 2s ease 1s both;
+
+}
+.seccion .article{
+    width: 100%;
+    min-height: 20vh;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    overflow: hidden;
+}
+.seccion .figure{
+    width: 100%;
+    background-color: red;
+    border-radius: 10% ;
+    overflow: hidden;
+}
+.seccion .img{
+    width: 100%;
+    background-color: lime;
+}
+.seccion .h4{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1rem);
+    border-radius: 10%;
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: all .5s ease;
+    font-size: 1.1em;
+    font-family: 'Lato', sans-serif;
+    transform: translateZ(1) scale(1.2);
+    font-style: italic;
+}
+.seccion .article:hover .h4{
+    opacity: 1;
+    transform: scale(1);
+}
+.works{
+    background-color: rgba(26, 25, 25, .5);
+    box-shadow: 0 0 1em rgb(255, 255, 255);
+    transition: box-shadow 0.3s ease-in-out;
+}
+.works:hover{
+    box-shadow: 0 0 2em rgba(255, 255, 255, 0.363);
+}
+.works .h2{
+    margin: 0 0 1rem;
+}
+
+.about .h2{
+    margin: 0 0 2rem;
+}
+.about .p{
+    max-width: 40rem;
+    margin: 0 0 1rem;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+
+}
+.about .rrss{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about .li{
+    margin: 0 1em;
+}
+.about .svg{
+    width: 3em;
+    height: 3em; 
+    animation: aparecer2 2s ease 1s both;
+}
+.about .svg:hover{
+    width: 3.5em;
+    height: 3.5em;
+    transition: all .5s ease;;
+}
+.about .svg:not(:hover){
+    width: 3em;
+    height: 3em; 
+    transition: all .5s ease;;
+}
+
+.footer{
+    padding: 2em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    animation: aparecer2 2s ease 1s both;
+}
+
+.footer .span {
+    font-style: italic;
+}
+
+@keyframes circulo1{
+    from{
+       transform: rotate(0deg) scale(3);
+    }
+    to{
+       transform: rotate(360deg) scale(3);
+    }
+}
+@keyframes aparecer1 {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@keyframes aparecer2 {
+    from{
+        opacity: 0;
+        transform: translateZ(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+#cursor{
+    width: 5em;
+    height: 5em;
+    background-color: white;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+#cursor.mini{
+    transform: scale(0.5);
+    transition:all .1s linear ;
+}
