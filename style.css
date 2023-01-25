@@ -326,4 +326,20 @@ ul{
     transform: scale(0.5);
     transition:all .1s linear ;
 }
+@media (max-width: 700px) {
+    .seccion .info {
+        font-size: .9em;
+        animation: aparecer1 2s ease 1s both;
+    }
+    .rrss{
+        font-size: 1.3em;
+    }
+    .seccion .ul .a{
+        width: 5em;
+        margin: 3em;
+    }
+    #cursor {
+        display: none;
+    }
+  }
 
