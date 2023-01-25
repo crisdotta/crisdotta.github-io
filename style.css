@@ -338,6 +338,9 @@ ul{
         width: 5em;
         margin: 3em;
     }
+    .seccion .ul .a:hover{
+        color: inherit;
+    }
     #cursor {
         display: none;
     }
